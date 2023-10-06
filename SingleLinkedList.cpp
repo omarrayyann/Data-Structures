@@ -25,13 +25,12 @@ private:
     int length = 0;
 
 public:
-    MyLinkedList();                   // empty list constructor
-    ~MyLinkedList();                  // destructor to clean up all nodes
-    bool empty() const;               // is list empty?
-    void addFront(int elem);          // add a new Node at the front of the list
-    void removeFront();               // remove front Node from the list
-    unsigned int countElem(int elem); // count frequency of an element in the list
-    int getIndexOf(int elem);         // returns first index of an element in the list, -1 if the element is not present
+    MyLinkedList();           // empty list constructor
+    ~MyLinkedList();          // destructor to clean up all nodes
+    bool empty() const;       // is list empty?
+    void addFront(int elem);  // add a new Node at the front of the list
+    void removeFront();       // remove front Node from the list
+    int getIndexOf(int elem); // returns first index of an element in the list, -1 if the element is not present
     void display() const;
     void loadData(string);       // read a file and load it into the linked list
     void dumpData(string) const; // write the linked list to a file
@@ -82,35 +81,6 @@ void MyLinkedList::removeFront()
         head = head->next;
         length--;
         delete temp;
-    }
-}
-//====================================
-// count frequency of an element in the list
-unsigned int MyLinkedList::countElem(int elem)
-{
-
-    // todo
-    Node *tempHead = head;
-    int counter = 0;
-    if (tempHead != NULL)
-    {
-        if (tempHead->elem == elem)
-        {
-            counter++;
-        }
-        while (tempHead->next != NULL)
-        {
-            tempHead = tempHead->next;
-            if (tempHead->elem == elem)
-            {
-                counter++;
-            }
-        }
-        return counter;
-    }
-    else
-    {
-        return 0;
     }
 }
 //==============================================
@@ -176,27 +146,6 @@ void MyLinkedList::sort()
             temp = temp->next;
         }
     }
-}
-//==============================================
-// Load data from a file and add it to the Linked List
-void MyLinkedList::loadData(string path)
-{
-    ifstream inputStream;
-    int tempElement;
-    inputStream.open(path, ios::in);
-    if (inputStream.fail())
-    {
-        cout << "File does not exist" << endl;
-    }
-    else
-    {
-        while (inputStream >> tempElement)
-        {
-            this->addFront(tempElement);
-        }
-    }
-
-    inputStream.close();
 }
 //=============================================
 // Dump/write the contents of the list to a file
