@@ -147,23 +147,3 @@ void MyLinkedList::sort()
         }
     }
 }
-//=============================================
-// Dump/write the contents of the list to a file
-void MyLinkedList::dumpData(string path) const
-{
-    if (head != NULL)
-    {
-        ofstream outputStream;
-        outputStream.open(path, ifstream::out);
-        Node *temp = head;
-        outputStream << temp->elem;
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-            outputStream << endl
-                         << temp->elem;
-        }
-        outputStream.close();
-    }
-}
-//==================================================
