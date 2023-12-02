@@ -56,28 +56,3 @@ class SingleLinkedList{
         }
     
 };
-
-int main(){
-    SingleLinkedList dd = SingleLinkedList();
-    dd.addFront(1);
-    dd.addFront(0);
-        dd.addFront(3);
-
-        dd.removeFront();
-    
-    dd.display();
-     dd.addFront(1);
-    dd.addFront(0);
-        dd.addFront(3);
-
-        dd.removeFront();
-    
-    dd.display();
-            dd.removeFront();
-        dd.removeFront();
-        dd.removeFront();
-        dd.removeFront();
-
-        cout << endl << dd.empty() << endl << endl;
-
-}
