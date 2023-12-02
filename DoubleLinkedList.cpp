@@ -71,5 +71,4 @@ class DoubleLinkedList{
                 cout << temp->element << " ";
             }
         }
-    
 };

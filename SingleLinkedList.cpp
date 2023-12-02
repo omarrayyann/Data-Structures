@@ -54,5 +54,4 @@ class SingleLinkedList{
                 temp = temp->next;
             }
         }
-    
 };
