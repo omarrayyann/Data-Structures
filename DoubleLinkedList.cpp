@@ -70,5 +70,6 @@ class DoubleLinkedList{
                 temp = temp->next;
                 cout << temp->element << " ";
             }
+            cout << endl;
         }
 };

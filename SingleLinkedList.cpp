@@ -53,5 +53,6 @@ class SingleLinkedList{
                 cout << temp->element << " ";
                 temp = temp->next;
             }
+            cout << endl;
         }
 };
